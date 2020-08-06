@@ -1,3 +1,17 @@
+# How it works
+
+[![demo](https://i.imgur.com/i8CSoHw.gif)]
+
+_In the gif: copy the text under the cursor and paste it into the editor_
+
+Firefox has a "Take a screenshot" functionality which is able to detect boxes of
+text. The idea is to leverage this by
+
+- Emulating user input using `xdotool`, for taking the screenshot
+- Post-process the screenshot using OpenCV for improving Tesseract's accuracy
+- Using Tesseract for capturing the text contents from the screenshot
+
+
 # Before running
 
 Install the dependencies with Poetry
@@ -42,12 +56,3 @@ Install the dependencies with Poetry
         GObject-based multi-platform GUI toolkit
 
     ```
-
-# How it works
-
-Firefox has a "Take a screenshot" functionality which is able to detect boxes of
-text. The idea is to leverage this by
-
-- Emulating user input using `xdotool`, for taking the screenshot
-- Post-process the screenshot using OpenCV for improving Tesseract's accuracy
-- Using Tesseract for capturing the text contents from the screenshot
